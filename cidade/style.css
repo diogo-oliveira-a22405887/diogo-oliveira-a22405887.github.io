@@ -4,11 +4,12 @@ body {
     }
 
     header {
-      background-color: #1e293b; /* azul escuro */
-      padding: 10px 20px;
+      background-color: #1e293b; 
+      color: white;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: space-between; 
+      align-items: center; 
+      padding: 15px 30px;
     }
 
     nav {
