@@ -3,19 +3,175 @@
     <head>
         <meta charset="UTF-8">
         <title>Cidade</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            .fotografias{
+                display: flex;
+                flex-direction: row;
+                flex-flow: wrap;
+                gap: 10px;
+            }
+
+            .fotografias img{
+                width: 150px;
+                border-radius: 20px;
+            }
+
+            .Poesia p:nth-child(n+0):nth-child(-n+4){
+                font-style: italic;
+                color: darkblue;
+                font-family: "Georgia", serif;
+            }
+
+            .Poesia2 p:nth-child(n+0):nth-child(-n+4){
+                font-weight: bold;
+                color: darkred;
+                font-family: "Times New Roman", serif;
+            }
+
+            .Poesia3 p:nth-child(n+0):nth-child(-n+4){
+                font-style: italic;
+                color: darkgreen;
+                font-family: "Arial", sans-serif;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                color: white;
+                margin: 0 15px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 15px;
+                transition: color 0.3s;
+            }
+
+            nav a:hover {
+                color: #f39c12;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
+
+            h2, h3 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 15px;
+            }
+
+            iframe {
+                display: block;
+                margin: 0 auto;
+                border-radius: 10px;
+                box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: center;
+                border: 1px solid #ddd;
+                vertical-align: top;
+            }
+            th {
+                background: #34495e;
+                color: white;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+
+            td {
+                background: #fff;
+            }
+
+        </style>
     </head>
     <body>
         <header>
             <h1>A minha Cidade</h1>
-        </header>
+       
         <main>
-            <h2>Penteado</h2>
+            
             <nav>
                 <a href="index.html">Home</a>
                 <a href="local.html">Localização</a>
                 <a href="multimedia.html">Multimédia</a>
                 <a href="info.html">Informação</a>
             </nav>
+        </header>
+            <h2>Multimédia</h2>
+            <p>
+                <a href="#Fotografias">Fotografias</a>
+                <a href="#video">Vídeo</a>
+                <a href="#poema">Poesia</a>
+            </p>
+            <p>Alguns pontos turisticos sobre a cidade</p>
+
+            <section>
+                <h3 id="Fotografias">Fotografias</h3>
+                <div class="fotografias">
+                    <img src="images/img1.jpg" alt="Vista da cidade apartir de um prédio">
+                    <img src="images/img2.jpg" alt="Parque">
+                    <img src="images/img3.jpg" alt="Pôr do sol">
+                    <img src="images/img4.jpg" alt="Vista de cima">
+                    <img src="images/img5.jpg" alt="Lago">
+                    <img src="images/img6.jpg" alt="Centro da cidade">
+                    <img src="images/img7.jpg" alt="Cidade de noite">
+                    <img src="images/img8.jpg" alt="Cidade de dia">
+                </div>
+            </section>
+            <section>
+                <h3 id="video">Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6y5CqAHxGX0?si=Op4JRECduKCSxtA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            <section>
+                <h3 id="poema">Poesia</h3>
+
+                <table border="1">
+                    <tr>
+                        <th>Energia</th>
+                        <th>Harmonia</th>
+                        <th>Diversidade</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                           <div class="Poesia">
+                            <p>Cidade de luz que nunca adormece,</p>
+                            <p>sonhos cruzados no mesmo lugar,</p>
+                            <p>Nova Iorque ergue-se e enriquece,</p>
+                            <p>um coração que vive a pulsar.</p>
+                           </div>
+                        </td>
+                        <td>
+                            <div class="Poesia2">
+                                <p>No Central Park, a calma se esconde,</p>
+                                <p>Brooklyn se estende em força e união,</p>
+                                <p>e a Liberdade, no alto da ponte,</p>
+                                <p>guia o futuro de cada nação.</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="Poesia3">
+                                <p>Arte, comércio, culturas em dança,</p>
+                                <p>rua a rua se escreve a história,</p>
+                                <p> Nova Iorque é força, é esperança,</p>
+                                <p>um eco eterno de luta e glória.</p>  
+                            </div>
+                        </td>
+                    </tr>
+                    
+                
+                </table>
+            </section>
         </main>
         <footer>
             <p>DIW 2025</p>
