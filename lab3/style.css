@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+*{box-sizing: border-box; }
+
+header {
+  background-color: #1e293b; 
+  color: white;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 30px;
+}
+
+nav {
+  display: flex;
+  text-align: right;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8; 
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-bar input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 6px 12px;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #0ea5e9;
+}
+
+
+iframe{
+  width: 150px;
+  height: 150px;
+}
+
+.informacao {
+  width: 55%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  font-family: "Georgia", serif;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.informacao th, td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.informacao th {
+  background: #2c3e50;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.informacao td {
+  font-size: 16px;
+  color: #333;
+}
+
+.informacao tr:last-child td {
+  border-bottom: none;
+}
+
+.informacao td[colspan="2"] {
+  text-align: center;
+  font-weight: bold;
+  background: #f4f6f9;
+  color: #2c3e50;
+  font-size: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.informacao tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.h2 {
+  grid-area: titulo;
+  font-family: "Georgia", serif;
+  font-size: 26px;
+  color: #34495e;
+  text-align: center;
+  font-weight: 600;
+  margin: 30px 0 20px;
+  position: relative;
+}
+
+footer {
+  background: #f9f9f9;
+  color: #555;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  height: auto;
+}
+
+.p{
+  grid-area: texto;
+  font-family: "Georgia", serif;
+  text-align: center;
+  color: #555;
+}
+
+.mapa {
+  grid-area: "mapa";
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.localizacao {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* esquerda = texto, direita = mapa */
+  grid-template-areas: 
+    "titulo area"
+    "texto area";
+  gap: 24px;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+  align-items: start;
+}
+
+@media (max-width: 480px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;   /* header, main, footer em coluna */
+  }
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  header h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  nav {
+    width: 100%;
+    gap: 8px;
+    flex-wrap: wrap;
+    display: flex;
+  }
+  nav a {
+    display: block;
+    flex: 1 1 calc(50% - 8px); /* 2 por linha; usa 100% para 1 por linha */
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #243244;
+    border: 1px solid #334155;
+  }
+
+  main {
+    padding: 0 16px 20px;
+    margin: 16px 0;
+  }
+
+  .h2, main h2 {
+    font-size: 20px;
+    margin: 20px 0 12px;
+  }
+
+  img, .img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+
+
+
+
+  .p {
+    padding: 0 6px;
+    font-size: 15px;
+  }
+
+  footer {
+    padding: 14px 10px;
+    font-size: 13px;
+  }
+
+  .localizacao {
+    display: flex;              
+    flex-direction: column;     
+    gap: 16px;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .localizacao iframe {
+    width: 100%;
+    height: 250px;             
+  }
+
+  .localizacao h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .localizacao p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .informacao {
+    width: 100%;           /* ocupa toda a largura do ecrã */
+    font-size: 14px;       /* letras mais pequenas */
+  }
+
+  .informacao th,
+  .informacao td {
+    padding: 8px 10px;     /* menos espaço nas células */
+    word-wrap: break-word; /* quebra linhas longas */
+    text-align: left;      /* melhor leitura no mobile */
+  }
+
+  .informacao td[colspan="2"] {
+    text-align: center;
+    font-size: 14px;
+  }
+
+
+
+
+}
+
+
+
