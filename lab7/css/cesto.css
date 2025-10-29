@@ -1,0 +1,183 @@
+/* ===== Centro a secção no ecrã ===== */
+main{
+  display:flex; 
+  justify-content:center; 
+  align-items:center;
+  min-height:calc(100vh - 140px); 
+  padding:20px; background:#f3f4f6;
+}
+
+/* ===== Cartão do cesto ===== */
+#cesto{
+  background:#fff; 
+  border:1px solid #e5e7eb; 
+  border-radius:16px;
+  width:min(560px, 92%); 
+  padding:22px; 
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  display:grid; 
+  gap:16px; margin:0 auto;
+}
+
+/* Título “chip” */
+#cesto::before{
+  content:"🛒 O Meu Cesto"; 
+  display:inline-block;
+  font-weight:700; 
+  font-size:1.06rem; 
+  color:#075985;
+  background:#e0f2fe; 
+  border-radius:999px; 
+  padding:6px 14px; 
+  margin-bottom:4px;
+}
+
+/* Itens do cesto */
+#cesto article{
+  display:grid; 
+  grid-template-columns:84px 1fr auto; 
+  align-items:center; gap:14px;
+  background:#f8fafc; 
+  border:1px solid #e2e8f0; 
+  border-radius:12px; padding:12px;
+}
+#cesto article figure{
+   margin:0; 
+}
+#cesto article img{ 
+  width:84px; 
+  height:84px; 
+  object-fit:contain; display:block; 
+}
+#cesto article h3{ 
+  margin:0; font-size:1rem; 
+  color:#111827; 
+  word-break:break-word; 
+  overflow-wrap:anywhere; 
+}
+#cesto article p{
+   margin:0; 
+   color:#475569; 
+}
+#cesto article p:last-child{
+   justify-self:end; 
+   white-space:nowrap; 
+   font-weight:700; 
+   color:#111827; 
+}
+
+/* Linha + total */
+#cesto hr{ 
+  height:1px; 
+  border:none; 
+  background:#e2e8f0; 
+  margin:10px 0; 
+}
+#cesto p strong{
+   color:#111827; 
+}
+
+/* Checkbox bonita */
+label[for="estudante"]{ 
+  display:inline-block; 
+  margin-right:10px; 
+  color:#334155; 
+}
+#cesto input#estudante{
+  appearance:none; 
+  width:18px; 
+  height:18px; 
+  margin:0 0 -3px 0;
+  border:2px solid #94a3b8; 
+  border-radius:6px; 
+  background:#fff; 
+  cursor:pointer; 
+  position:relative;
+  transition:border-color .15s, background .15s;
+}
+#cesto input#estudante:hover{
+   border-color:#2563eb; 
+}
+#cesto input#estudante:checked{
+   background:#2563eb; 
+   border-color:#2563eb; 
+}
+#cesto input#estudante:checked::after{
+  content:""; position:
+  absolute; left:4px; 
+  top:1px; width:6px; 
+  height:10px;
+  border:2px solid #fff; 
+  border-top:none; 
+  border-left:none; 
+  transform:rotate(45deg);
+}
+
+/* Input cupão */
+#cesto input[type="text"]{
+  width:100%; 
+  padding:10px 12px; 
+  border-radius:10px;
+  border:1px solid #cbd5e1; 
+  background:#f9fafb; 
+  color:#111827; 
+  font-size:.95rem;
+  transition:border-color .2s, box-shadow .2s;
+}
+#cesto input[type="text"]:focus{
+  outline:none; 
+  border-color:#2563eb; 
+  box-shadow:0 0 0 3px rgba(37,99,235,.18);
+}
+
+/* Botão comprar */
+#cesto button{
+  background:#3b82f6; 
+  color:#fff; 
+  border:none; 
+  border-radius:10px;
+  padding:11px 16px; 
+  font-weight:700; 
+  cursor:pointer; 
+  transition:transform .12s, background .15s;
+}
+#cesto button:hover{
+   background:#2563eb; 
+   transform:translateY(-1px); 
+}
+#cesto button:disabled{
+   opacity:.65; cursor:not-allowed; 
+}
+
+/* Valor final + referência */
+#cesto p.valor-final{
+  margin-top:6px;
+   background:#ecfeff; 
+   border:1px solid #bae6fd; 
+   color:#0c4a6e;
+  padding:10px 12px; 
+  border-radius:10px; font-weight:600;
+}
+#cesto p.referencia{
+   margin:0; 
+   color:#334155; 
+}
+#cesto p.referencia code{
+  background:#f1f5f9; 
+  border:1px solid #e2e8f0; 
+  padding:2px 6px; 
+  border-radius:6px;
+  font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; 
+  font-size:.92rem;
+}
+
+/* Footer discreto */
+footer{ 
+  text-align:center; 
+  font-size:.85rem; 
+  color:#64748b; 
+  padding:12px 8px; 
+  background:#f1f5f9; 
+  border-top:1px solid #e2e8f0; 
+}
+

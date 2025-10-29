@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Example</title>
+    
+    
+    
+</head>
+<body>
+    <header>
+        <nav class="topbar">
+            <a class="logo-link">
+                <img src="images/deisi-ball.png" alt="DEISI Logo" class="logo">
+            </a>
+            <ul class="navigation">
+                <li><a href="../index.html" class="btn-home">Home</a></li>
+            </ul>
+        </nav>
+
+        <section id="filtro-categorias">
+            <label for="categoria">Filtrar:</label>
+            <select id="categoria">
+                <option value="">Todas as categorias</option>
+            </select>
+            <label for="preco">Ordenar:</label>
+            <select id="ordenar">
+                <option value="">Ordenar pelo preço</option>
+                <option value="asc">Preço crescente</option>
+                <option value="desc">Preço decrescente</option>
+            </select>
+            <label for="preco">Procurar:</label>
+            <input type="text" id="procurar">
+        </section>
+        <h1>Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">🛍️ Produtos</a></li>
+                <li><a href="cesto.html" class="ativo">🛒 Cesto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="produtos"></section>
+
+        <section id="cesto"></section>
+
+        
+
+    </main>
+
+    <footer></footer>
+    
+
+
+
+    <!-- HTML já carregado! -->
+    <script src="scripts/main.js"></script>
+</body>
+</html> 
