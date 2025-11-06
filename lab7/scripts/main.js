@@ -51,11 +51,14 @@ async function carregarCategorias() {
 
   try {
     const resposta = await fetch(`${BASE_URL}/categories/`, {
+
       headers: { Accept: "application/json" },
     });
+    
     if (!resposta.ok) throw new Error(`Erro HTTP ${resposta.status}`);
 
     const categorias = await resposta.json(); // ex.: ["T-shirts","Canecas","Meias"]
+    console.log(categorias)
 
     categorias.forEach((cat) => {
       const option = document.createElement("option");
@@ -93,6 +96,9 @@ async function carregarProdutos() {
 
     const dados = await resp.json();
     const produtos = Array.isArray(dados) ? dados : (dados.results || dados.products || []);
+    console.log(dados)
+    console.log(produtos)
+    console.log(qs)
 
     // 2) Fallback: se a API não filtrou, filtramos no cliente
     let lista = categoria
@@ -124,6 +130,8 @@ async function carregarProdutos() {
     } else if (ordenar === "desc") {
       lista.sort((a, b) => Number(b.price) - Number(a.price));
     }
+
+
 
     
 
@@ -168,6 +176,9 @@ function criarProduto(produto) {
   const valor = document.createElement("strong");
   valor.textContent = `€${Number(produto.price).toFixed(2)}`;
   preco.append("Preço: ", valor);
+
+
+
 
   const botao = document.createElement("button");
   botao.textContent = "+ Adicionar ao cesto";
